@@ -1,32 +1,29 @@
 <template>
   <a
-    class="item just-display"
-    @click="updateDisplay"
+    :class="['item', position]"
+    @click="updateDisplay(number)"
   >{{ number }}</a>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   props: {
     number: {
-      type: Number,
+      type: String,
       required: true
     },
-    display: {
+    position: {
       type: String
     }
   },
 
   methods: {
-    updateDisplay() {
-      this.display = this.number
-    }
+    ...mapActions(['updateDisplay']),
   }
 };
 </script>
 
 <style scoped>
-#num0 {
-	border-bottom-left-radius: 14px;
-}
 </style>

@@ -1,9 +1,19 @@
 <template>
-  <a class="item" id="equal">=</a>
+  <a 
+    class="item" 
+    id="equal"
+    @click="calculate"
+    >=</a>
 </template>
 
 <script>
-export default {};
+import { mapActions } from 'vuex'
+
+export default {
+  methods: {
+    ...mapActions(['calculate'])
+  }
+};
 </script>
 
 <style scoped>

@@ -1,13 +1,19 @@
 <template>
-  <a class="item" id="AC">AC</a>
+  <a 
+    class="item top-right"
+    @click="resetDisplay"
+    >AC</a>
 </template>
 
 <script>
-export default {};
+import { mapActions } from 'vuex'
+
+export default {
+  methods: {
+    ...mapActions(['resetDisplay'])
+  }
+};
 </script>
 
 <style scoped>
-#AC {
-	border-top-right-radius: 14px;
-}
 </style>
