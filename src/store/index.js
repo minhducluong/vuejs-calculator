@@ -40,7 +40,7 @@ export default new Vuex.Store({
       display = display.replace(/×/g, "*")
       display = display.replace(/÷/g, "/")
       try {
-        state.display = eval(display).toString()
+        state.display = eval(display)
       } catch(e) {
         alert("Ông phá máy rồi!")
         state.display = ""

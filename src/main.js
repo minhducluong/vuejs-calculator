@@ -26,7 +26,7 @@ new Vue({
 
       // When use Backspace
       if (event.key == 'Backspace') {
-        let arr = that.$store.state.display.split('');
+        let arr = that.$store.state.display.toString().split('');
     
         arr.pop();
 
